@@ -9,7 +9,11 @@
             "email": "hitmanvi@qq.com"
         }
     ],
-
+    "autoload": {
+        "psr-4": {
+            "Hitmanv\\Laverify\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
     "require": {},
     "extra": {
