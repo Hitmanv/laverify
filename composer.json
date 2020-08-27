@@ -1,0 +1,22 @@
+{
+    "name": "hitmanv/laverify",
+    "description": "verify code",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hitman",
+            "email": "hitmanvi@qq.com"
+        }
+    ],
+
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hitmanv\\Laverify\\VerifyCodeServiceProvider"
+            ]
+        }
+    }
+}
