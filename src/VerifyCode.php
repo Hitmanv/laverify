@@ -11,7 +11,7 @@ class VerifyCode {
 
         Cache::put($key, $code, $ttl);
 
-        return true;
+        return $code;
     }
 
     public static function verify($type, $target, $value){
