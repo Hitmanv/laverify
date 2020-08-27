@@ -4,7 +4,6 @@ namespace Hitmanv\Laverify;
 
 use Illuminate\Http\Request;
 use Closure;
-use Hitman\Commons\Utils\VerifyCode;
 
 class VerifyCodeMiddleware 
 {
@@ -15,7 +14,7 @@ class VerifyCodeMiddleware
         $code = $request->get($codeKey);
 
         if(!VerifyCode::verify($type, $target, $code)) {
-            throw new VerifyCodeExcetion();
+            throw new VerifyCodeException();
         }
 
         return $next($request);
