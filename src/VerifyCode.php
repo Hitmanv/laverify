@@ -21,7 +21,7 @@ class VerifyCode {
         $vcode = Cache::get($key);
 
         if($value == $vcode) {
-            Cache::forget($target);
+            Cache::forget($key);
             return true;
         } else {
             return false;
