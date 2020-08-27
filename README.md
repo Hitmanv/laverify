@@ -14,7 +14,9 @@ composer require hitmanv/laverify
 use Hitmanv\Laverify\VerifyCode;
 
 // 生成验证码
-VerifyCode::gen($type, $target, $ttl=300); // type -> 不同用途的验证码 target -> 验证码对象 手机号码或邮箱等
+// type -> 不同用途的验证码 
+// target -> 验证码对象 手机号码或邮箱等
+VerifyCode::gen($type, $target, $ttl=300); 
 VerifyCode::verify($type, $target, $code);
 ```
 
@@ -25,6 +27,8 @@ VerifyCode::verify($type, $target, $code);
 'vc' => Hitmanv\Laverify\VerifyCodeMiddleware::class,
 
 // 使用
+// target_key -> 请求中验证码对象的键
+// code_key -> 请求中验证码的键
 someroute()->middleware('vc:type,target_key,code_key')
 ```
 
